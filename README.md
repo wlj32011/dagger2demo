@@ -1,7 +1,3 @@
-#dagger 2 详解
-
-
-
 ###前言
 依赖注入概念网络有很多解释，这里就不详细介绍，本文通过一个简单的示例一步步深入了解依赖注入的优势以及为什么使用依赖注入。
 ###概念
@@ -298,11 +294,11 @@ public interface AComponent {
 @Singleton 单例模式全局共用一个对象 就是@Scope的一个实现。
 
 这个Scope比较难以理解，我们举个例子自定义一个Scope：
-假如有个项目包含用户体系，用户登录成功后，A界面和B界面要依赖用户ID来获取一些数据，C界面不依赖于用户体系。
-我们想要把User对象实例可以在A和B界面共用。
+假如有个项目包含用户体系，用户登录成功后，A界面、B界面和C界面要依赖用户来获取一些数据，LoginActivity界面不依赖于用户体系。
+我们想要把User对象实例可以在A、B、C界面共用。
 
 那么整体项目的Scope划分结果图为：
-![untitled.jpg](https://github.com/wlj32011/dagger2demo/blob/master/untitled.jpg)
+![untitled.jpg](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/untitled.jpg)
 
 
 1.自定义UserScope注解
@@ -521,7 +517,9 @@ public class CActivity extends AppCompatActivity{
 
 ```
 10.最终效果，打印出User对象地址都是同一个地址:user@1524f0fa
-![device-2016-06-23-144101.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144101.png)![device-2016-06-23-144137.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144137.png)![device-2016-06-23-144101.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144149.png)
+![device-2016-06-23-144101.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144101.png)
+![device-2016-06-23-144137.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144137.png)
+![device-2016-06-23-144101.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144149.png)
 
 ####@Qualifier and @Named 
 @Named 其实是@Qualifier的一种实现，弄明白@Qualifier(限定符)基本上也就明白了@Named
@@ -650,15 +648,8 @@ public @interface Named {
 
 dagger2 主要功能 就此介绍完毕，如果觉得不错，就尽快用起来吧~
 
-参考：
+####参考：
 <http://google.github.io/dagger/>
 <http://frogermcs.github.io/>
-
-
-
-
-
-
-
-
-
+####demo地址：
+<https://github.com/wlj32011/dagger2demo>
