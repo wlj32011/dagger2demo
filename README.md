@@ -302,7 +302,7 @@ public interface AComponent {
 我们想要把User对象实例可以在A和B界面共用。
 
 那么整体项目的Scope划分结果图为：
-![untitled.jpg](quiver-image-url/E2766166E2A758FB141DF15ED76A44E7.jpg)
+![untitled.jpg](https://github.com/wlj32011/dagger2demo/blob/master/untitled.jpg)
 
 
 1.自定义UserScope注解
@@ -521,7 +521,7 @@ public class CActivity extends AppCompatActivity{
 
 ```
 10.最终效果，打印出User对象地址都是同一个地址:user@1524f0fa
-![device-2016-06-23-144101.png](quiver-image-url/5FCCAE2EF6586D858141B2C67A91B80C.png)![device-2016-06-23-144137.png](quiver-image-url/4D15D674E14D17C5CA97D41016991CAB.png)![device-2016-06-23-144149.png](quiver-image-url/B3561143C60085C23CDA892438097E40.png)
+![device-2016-06-23-144101.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144101.png)![device-2016-06-23-144137.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144137.png)![device-2016-06-23-144101.png](https://raw.githubusercontent.com/wlj32011/dagger2demo/master/device-2016-06-23-144149.png)
 
 ####@Qualifier and @Named 
 @Named 其实是@Qualifier的一种实现，弄明白@Qualifier(限定符)基本上也就明白了@Named
